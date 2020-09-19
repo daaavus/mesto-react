@@ -1,0 +1,17 @@
+.element__heart {
+  width: 21px;
+  height: 20px;
+  background: url('../../../images/heart.svg') center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.element__heart:active, .element__heart:focus { outline: none; }
+
+.element__heart:hover {
+  opacity: 0.6;
+}

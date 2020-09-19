@@ -1,0 +1,18 @@
+.popup__save-button_disabled{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  color: #C4C4C4;
+  pointer-events: none;
+}
+
+.popup__save-button_disabled:hover {
+  opacity: 1;
+}
+
+.popup__save-button_disabled::selection{
+  pointer-events: none;
+}
+
+.popup__save-button_disabled:scope{
+  pointer-events: none;
+}

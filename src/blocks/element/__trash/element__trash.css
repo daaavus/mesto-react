@@ -1,0 +1,19 @@
+.element__trash {
+  position: relative;
+  bottom: 350px;
+  left: 240px;
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+  background-image: url('../../../images/pomoika.png');
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: unset;
+}
+
+.element__trash:active, .element__trash:focus { outline: none; }
+
+.element__trash:hover {
+  opacity: .6;
+}
