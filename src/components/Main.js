@@ -26,7 +26,7 @@ export default function Main(props) {
         <button className="profile__add-button" onClick={props.onAddPlace} type="button"></button>
         </section>
 
-        <ul className="elements">{props.cards.map(card => <Card key={card._id} {...card} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onCardDelete={props.onCardDelete} />)}</ul>
+        <ul className="elements">{props.cards.map(card => <Card key={card._id} {...card} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onDeleteCard={props.onDeleteCard} onDeleteCardAccept={props.onDeleteCardAccept} />)}</ul>
 
     </main>
  )

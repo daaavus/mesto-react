@@ -24,6 +24,7 @@ export default function Card(props) {
     function handleDeleteClick() {
         props.onDeleteCardAccept(props)
     }
+    
 
     return(
         <>

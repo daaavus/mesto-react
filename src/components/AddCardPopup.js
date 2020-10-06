@@ -15,7 +15,7 @@ export default function AddCardPopup(props) {
         e.preventDefault();
 
         props.onAddCard({
-            title,
+            name: title,
             link
           });
     }
@@ -31,11 +31,11 @@ export default function AddCardPopup(props) {
         onClose={props.onClose}
         onSubmit={handleSubmit}
       >
-      <input value={title} className="popup__mesto input" placeholder="Название"type="text" 
+      <input value={title || ''} className="popup__mesto input" placeholder="Название"type="text" 
       minLength="1" maxLength="30" id='input-place' required onChange={handleTitleChange} />
       <span className='input-error' id="input-place-error"></span>
 
-      <input value={link} className="popup__link input" placeholder="Ссылка на картинку"
+      <input value={link || ''} className="popup__link input" placeholder="Ссылка на картинку"
         type='url' id='input-url' required onChange={handleLinkChange} />
       <span className='input-error' id="input-url-error"></span>
       </PopupWithForm>

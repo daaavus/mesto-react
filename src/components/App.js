@@ -96,7 +96,7 @@ function App() {
 			setIsAddPlacePopupOpen(false);
 		})
 		  .catch(err=>console.log(err));
-	}
+  }
   
   return (
     <> 
@@ -120,8 +120,6 @@ function App() {
       <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} 
       onUpdateAvatar={handleUpdateAvatar}/>
       <AddCardPopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} onAddCard={handleAddPlaceSubmit}/>
-
-      <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}/>
 
       <PopupWithForm 
         name={'delete-popup'}
