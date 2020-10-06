@@ -28,33 +28,27 @@ class Api {
         }
       })
   }
-  updateProfileInfo(firstInput, secondInput) {
+  updateProfileInfo(item) {
     return fetch(`${this.baseUrl}/users/me` , {
       method: 'PATCH',
       headers: {
         authorization: '9dc23caf-3e9f-4f59-bf1d-09412a94602c',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        name: firstInput.value,
-        about: secondInput.value
-      })
+      body: JSON.stringify(item)
     })
-    .then(this.checkResponce)
+      .then(this.checkResponce)
   }
-  addCard(firstInput, secondInput) {
+  addCard(item) {
     return fetch(`${this.baseUrl}/cards` , {
       method: 'POST',
       headers: {
         authorization: '9dc23caf-3e9f-4f59-bf1d-09412a94602c',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        name: firstInput.value,
-        link: secondInput.value
-      })
+      body: JSON.stringify(item)
     })
-    .then(this.checkResponce)
+      .then(this.checkResponce)
   }
   likeCard(id) {
     return fetch(`${this.baseUrl}/cards/likes/${id}`, {
@@ -80,19 +74,21 @@ class Api {
     })
     .then(this.checkResponce)
   }
-  updateAvatar(input) {
+  updateAvatar(avatar) {
     return fetch(`${this.baseUrl}/users/me/avatar` , {
       method: 'PATCH',
       headers: {
         authorization: '9dc23caf-3e9f-4f59-bf1d-09412a94602c',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        avatar: input.value
-      })
+      body: JSON.stringify(avatar)
     })
     .then(this.checkResponce)
   }
+  editLikeActive(id, isLiked) {
+		const res = isLiked ? this.likeCard(id) : this.deleteLike(id);
+		return res;
+	}
 }
 
 const api = new Api({

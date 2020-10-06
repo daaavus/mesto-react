@@ -2,8 +2,6 @@ import React from 'react';
 
 export default function PopupWithImage({card, onClose}) {
     const link = card ? card.link : '#'; 
-    console.log(link)
-    console.log(card)
     return(
         <div className={`image-popup ${card && 'popup_opened'}`}>
             <form className="image-popup__container">
