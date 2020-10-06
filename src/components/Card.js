@@ -34,7 +34,7 @@ export default function Card(props) {
             <h4 className="element__title">{props.name}</h4>
             <div className="element__like-container">
                 <button className={cardLikeActiveClassName} onClick={handleLikeClick} type="button"></button>
-                <p className="element__like-count">{props.likes.lenght}</p>
+                <p className="element__like-count">{props.likes.length}</p>
             </div>
             <button className={cardDeleteClassName} onClick={handleDeleteClick} type="button"></button>
             </li>
