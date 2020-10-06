@@ -82,11 +82,11 @@ function App() {
     .catch(err=>console.log(err));
   }
   function handleUpdateAvatar(avatar) {
-    api.putAvatarInfo(avatar)
-		.then((res) =>{
-			setCurrentUser(res);
-			setIsEditAvatarPopupOpen(false)
-		})
+    api.updateAvatar(avatar)
+		  .then((res) =>{
+			  setCurrentUser(res);
+			  setIsEditAvatarPopupOpen(false)
+		  })
 		  .catch(err=>console.log(err));
   }
   function handleAddPlaceSubmit(card) {
